@@ -1,4 +1,4 @@
-def count_line_fail(file_name):
+def count_line_file(file_name):
 # Counting the number of lines in a file
     with open(file_name, encoding="utf-8") as f:
         line_file = f.readlines()
@@ -6,13 +6,13 @@ def count_line_fail(file_name):
 
 def sort_files(list_file_names):
     dict_files = {}
-# Creating dict {fail_name: count_line}
-    for fail_name in list_file_names:
-        dict_files[fail_name] =  count_line_fail(fail_name)
+# Creating dict {file_name: count_line}
+    for file_name in list_file_names:
+        dict_files[file_name] =  count_line_file(file_name)
 # Sorting dict
     sorted_dict = {}
-    for fail_name in sorted(dict_files, key=dict_files.get):
-        sorted_dict[fail_name] = dict_files[fail_name]
+    for file_name in sorted(dict_files, key=dict_files.get):
+        sorted_dict[file_name] = dict_files[file_name]
     return sorted_dict
 
 def write_in_file(file_name, sorted_file):
