@@ -1,6 +1,6 @@
 def read_cook_book(file_name):
 # Creating cook book with a file
-    cook_book ={}
+    cook_book = {}
     with open(file_name, encoding="utf-8") as f:
 # Reading cook and count ingradient
         for line_file in f:
@@ -18,7 +18,6 @@ def read_cook_book(file_name):
                 recipe.append(ingradiet)
             cook_book.setdefault(cook, recipe)
             null_str = f.readline()
-
     return cook_book
 
 def get_shop_list_by_dishes(dishes, person_count):
@@ -26,7 +25,6 @@ def get_shop_list_by_dishes(dishes, person_count):
     cook_book = read_cook_book("recipes.txt")
     dict_ingradients = {}
     for dishe in dishes:
-#        print(dishe)
         for ingradient in cook_book[dishe]:
             count_ingradient = {}
             count_ingradient["measure"] = ingradient["measure"]
