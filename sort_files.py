@@ -11,8 +11,8 @@ def sort_files(list_file_names):
         dict_files[fail_name] =  count_line_fail(fail_name)
 # Sorting dict
     sorted_dict = {}
-    for key in sorted(dict_files, key=dict_files.get):
-        sorted_dict[key] = dict_files[key]
+    for fail_name in sorted(dict_files, key=dict_files.get):
+        sorted_dict[fail_name] = dict_files[fail_name]
     return sorted_dict
 
 def write_in_file(file_name, sorted_file):
